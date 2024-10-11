@@ -6,6 +6,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tru.trutermproject.TRUTermProject;
@@ -20,6 +22,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.DIAMOND))
                     .title(Component.translatable("creativetab.trutermproject.term_project_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept((Items.DIAMOND));
                         //output.accept(ModItems.ITEM); this is how to add things
                     })
                     .build());
@@ -28,8 +31,9 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.DIAMOND_BLOCK))
                     //inorder to define order
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TRUTermProject.MOD_ID, "term_project_tab"))
-                    .title(Component.translatable("creativetab.trutermproject.term_project_tab"))
+                    .title(Component.translatable("creativetab.trutermproject.term_project_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(Blocks.DIAMOND_BLOCK);
                         //output.accept(ModBlocks.BLOCK); this is how to add things
                     })
                     .build());
