@@ -1,6 +1,7 @@
 package net.tru.trutermproject;
 
 import net.tru.trutermproject.block.ModBlocks;
+import net.tru.trutermproject.item.ModCreativeModeTabs;
 import net.tru.trutermproject.item.ModItems;
 import org.slf4j.Logger;
 
@@ -37,8 +38,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 @Mod(TRUTermProject.MOD_ID)
-public class TRUTermProject
-{
+public class TRUTermProject {
     // Don't change mod id
     public static final String MOD_ID = "trutermproject";
     // Directly reference a slf4j logger
@@ -49,11 +49,9 @@ public class TRUTermProject
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public TRUTermProject(IEventBus modEventBus, ModContainer modContainer)
-    {
+    public TRUTermProject(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
 
 
         // Register ourselves for server and other game events we are interested in.
@@ -61,6 +59,7 @@ public class TRUTermProject
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -71,8 +70,7 @@ public class TRUTermProject
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
+    private void commonSetup(final FMLCommonSetupEvent event) {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
@@ -85,10 +83,9 @@ public class TRUTermProject
     }
 
     // Add Items to creative mode tabs
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
         //this is how you select the tabs
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 
         }
 
@@ -96,19 +93,16 @@ public class TRUTermProject
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
+    public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
