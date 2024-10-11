@@ -34,14 +34,16 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(TRUTermProject.MOD_ID)
 public class TRUTermProject
 {
-    // Define mod id in a common place for everything to reference
+    // Don't change mod id
     public static final String MOD_ID = "trutermproject";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    //to do, Change mod_authors in gradle.properties
+    //figure out what mod_license to use in gradle.properties
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
