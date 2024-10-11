@@ -1,5 +1,6 @@
 package net.tru.trutermproject;
 
+import net.tru.trutermproject.block.ModBlocks;
 import net.tru.trutermproject.item.ModItems;
 import org.slf4j.Logger;
 
@@ -61,6 +62,7 @@ public class TRUTermProject
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -82,9 +84,10 @@ public class TRUTermProject
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-    // Add the example block item to the building blocks tab
+    // Add Items to creative mode tabs
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        //this is how you select the tabs
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
 
         }
