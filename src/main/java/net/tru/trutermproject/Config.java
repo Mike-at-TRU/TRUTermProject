@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package net.tru.trutermproject;
 
 import java.util.List;
 import java.util.Set;

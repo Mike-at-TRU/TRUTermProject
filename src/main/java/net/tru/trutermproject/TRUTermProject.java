@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package net.tru.trutermproject;
 
 import org.slf4j.Logger;
 
