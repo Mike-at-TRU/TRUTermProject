@@ -20,21 +20,22 @@ how to create a block
     public static final DeferredBlock<Block> BLOCK_NAME = registerBlock("block_name",
             ()-> new Block(BlockBehaviour.Properties.of().strength(2f)));
             .Properties.of() has a lot of things but I would say add strength, sound, and requiresCorrectToolForDrop
+            also what are anonymous classes? use that to append hover text
 */
 
 
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-   //when you register a block you need to register an associated item so this is a method to do that
-private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block){
-    ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-}
+    //when you register a block you need to register an associated item so this is a method to do that
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
 
-    public static void register(IEventBus eventBus){
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
 
