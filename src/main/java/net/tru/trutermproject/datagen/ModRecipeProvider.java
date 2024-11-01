@@ -28,7 +28,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("BAB")
                 .pattern("BBB")
                 .define('B', Blocks.GOLD_BLOCK)
-                .define('a', Items.APPLE)
+                .define('A', Items.APPLE)
                 .unlockedBy("has_bismuth", has(Blocks.GOLD_BLOCK)).save(recipeOutput);
     }
 
