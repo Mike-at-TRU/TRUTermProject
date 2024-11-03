@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#neoforge:needs_gold_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_stone_tool"
+  ]
+}

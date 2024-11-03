@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#minecraft:needs_stone_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_wooden_tool"
+  ]
+}
