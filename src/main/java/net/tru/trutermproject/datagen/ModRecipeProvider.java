@@ -8,12 +8,17 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.tru.trutermproject.TRUTermProject;
+import net.tru.trutermproject.block.ModBlocks;
+import net.tru.trutermproject.item.ModItems;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 
 public class ModRecipeProvider extends RecipeProvider {
+    List<ItemLike> BERYL_SMELTABLES = List.of(ModItems.BERYL,
+            ModBlocks.BERYL_ORE, ModBlocks.BERYL_DEEPSLATE_ORE, ModBlocks.BERYL_END_ORE, ModBlocks.BERYL_NETHER_ORE);
+
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
@@ -29,7 +34,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("BBB")
                 .define('B', Blocks.GOLD_BLOCK)
                 .define('A', Items.APPLE)
-                .unlockedBy("has_bismuth", has(Blocks.GOLD_BLOCK)).save(recipeOutput);
+                .unlockedBy("has_gold_block", has(Blocks.GOLD_BLOCK)).save(recipeOutput);
+
+        oreSmelting(recipeOutput, BERYL_SMELTABLES, RecipeCategory.MISC, ModItems.BERYL, 1.5f, 200, "bertl");
+
+        oreBlasting(recipeOutput, BERYL_SMELTABLES, RecipeCategory.MISC, ModItems.BERYL, 1.5f, 100, "bertl");
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

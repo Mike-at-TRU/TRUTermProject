@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.5,
+  "group": "bertl",
+  "ingredient": {
+    "item": "trutermproject:beryl_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "trutermproject:beryl"
+  }
+}

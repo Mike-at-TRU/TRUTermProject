@@ -6,6 +6,7 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.tru.trutermproject.TRUTermProject;
+import net.tru.trutermproject.block.ModBlocks;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -16,6 +17,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
+        blockWithItem(ModBlocks.BERYL_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.BERYL_NETHER_ORE);
+        blockWithItem(ModBlocks.BERYL_ORE);
+        blockWithItem(ModBlocks.BERYL_END_ORE);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

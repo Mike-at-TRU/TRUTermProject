@@ -1,8 +1,11 @@
 package net.tru.trutermproject.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -22,6 +25,19 @@ how to create a block
             .Properties.of() has a lot of things but I would say add strength, sound, and requiresCorrectToolForDrop
             also what are anonymous classes? use that to append hover text
 */
+
+    public static final DeferredBlock<Block> BERYL_ORE = registerBlock("beryl_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> BERYL_DEEPSLATE_ORE = registerBlock("beryl_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4),
+                    BlockBehaviour.Properties.of().strength(4.5f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> BERYL_END_ORE = registerBlock("beryl_end_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4),
+                    BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> BERYL_NETHER_ORE = registerBlock("beryl_nether_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

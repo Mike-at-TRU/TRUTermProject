@@ -8,6 +8,8 @@ import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.tru.trutermproject.TRUTermProject;
+import net.tru.trutermproject.block.ModBlocks;
+import net.tru.trutermproject.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -19,14 +21,24 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-
-        tag(BlockTags.MINEABLE_WITH_PICKAXE);
+        tag(ModTags.Blocks.BERYL_ORE)
+                .add(ModBlocks.BERYL_DEEPSLATE_ORE.get())
+                .add(ModBlocks.BERYL_END_ORE.get())
+                .add(ModBlocks.BERYL_ORE.get())
+                .add(ModBlocks.BERYL_NETHER_ORE.get());
+        tag(ModTags.Blocks.TRU_TERM_PROJECT_BLOCKS)
+                .addTag(ModTags.Blocks.BERYL_ORE);
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(ModTags.Blocks.BERYL_ORE);
         tag(BlockTags.MINEABLE_WITH_HOE);
         tag(BlockTags.MINEABLE_WITH_SHOVEL);
         tag(BlockTags.MINEABLE_WITH_AXE);
 
         tag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
         tag(Tags.Blocks.NEEDS_GOLD_TOOL);
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .addTag(ModTags.Blocks.BERYL_ORE);
+
         tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
                 .addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)

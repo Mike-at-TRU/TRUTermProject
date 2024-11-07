@@ -6,7 +6,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tru.trutermproject.TRUTermProject;
 
-public class ModItems  {
+public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TRUTermProject.MOD_ID);
 
     /*items will be
@@ -17,7 +17,10 @@ public class ModItems  {
 
    */
 
-    public static void register(IEventBus eventBus){
+    public static final DeferredItem<Item> BERYL = ITEMS.register("beryl",
+            () -> new Item(new Item.Properties()));
+
+    public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
 

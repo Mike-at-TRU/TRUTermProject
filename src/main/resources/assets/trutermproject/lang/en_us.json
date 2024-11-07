@@ -1,4 +1,9 @@
 {
+  "block.trutermproject.beryl_end_ore": "Term Project Items",
+  "block.trutermproject.beryl_nether_ore": "Term Project Items",
+  "block.trutermproject.beryl_deepslate_ore": "Term Project Items",
+  "block.trutermproject.beryl_ore": "Term Project Items",
+  "item.trutermproject.beryl": "Term Project Items",
   "creativetab.trutermproject.term_project_tab": "Term Project Items",
   "creativetab.trutermproject.term_project_blocks": "Second Tab For Example"
 }

@@ -1,4 +1,4 @@
-// 1.21	2024-11-01T15:01:26.8827645	Tags for minecraft:block mod id trutermproject
+// 1.21	2024-11-07T12:47:01.2976186	Tags for minecraft:block mod id trutermproject
 3a06f1ccf43617e98ef2540624c9493539422e58 data/minecraft/tags/block/incorrect_for_diamond_tool.json
 a66daf2e5873c1622a15f8c6d2699201cb31c0e6 data/minecraft/tags/block/incorrect_for_gold_tool.json
 bd0fb0e8a0d89d7674a639c1f1bf5f7b9d97fcc3 data/minecraft/tags/block/incorrect_for_iron_tool.json
@@ -7,7 +7,10 @@ b240c2f82560ed68c4a25d4c94018e4fdd6e71e7 data/minecraft/tags/block/incorrect_for
 2791ada2902330510f754fbcb88ca1310940302b data/minecraft/tags/block/incorrect_for_wooden_tool.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/mineable/axe.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/mineable/hoe.json
-35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/mineable/pickaxe.json
+ff6afbaf16e7f2198c91a5476369b2b2b590c384 data/minecraft/tags/block/mineable/pickaxe.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/mineable/shovel.json
+ff6afbaf16e7f2198c91a5476369b2b2b590c384 data/minecraft/tags/block/needs_iron_tool.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/neoforge/tags/block/needs_gold_tool.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/neoforge/tags/block/needs_netherite_tool.json
+1c8dd260701072436f9a0360adbe42d599025f2d data/trutermproject/tags/block/beryl_ore.json
+ff6afbaf16e7f2198c91a5476369b2b2b590c384 data/trutermproject/tags/block/tru_blocks.json

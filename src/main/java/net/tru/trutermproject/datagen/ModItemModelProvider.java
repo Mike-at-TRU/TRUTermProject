@@ -8,12 +8,14 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.tru.trutermproject.TRUTermProject;
+import net.tru.trutermproject.item.ModItems;
 
 import java.util.LinkedHashMap;
 
@@ -40,12 +42,13 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         //basicItem()
+        basicItem(ModItems.BERYL.get());
     }
 
-    //this is a java class not json, so I don't even feel bad about coping and pasting
+
     // Shoutout to El_Redstoniano for making this
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
-        final String MOD_ID = TRUTermProject.MOD_ID; // Change this to your mod id
+        final String MOD_ID = TRUTermProject.MOD_ID;
 
         if (itemDeferredItem.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {

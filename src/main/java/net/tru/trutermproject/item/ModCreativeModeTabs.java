@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tru.trutermproject.TRUTermProject;
+import net.tru.trutermproject.block.ModBlocks;
 
 import java.util.function.Supplier;
 
@@ -35,6 +36,10 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(Blocks.DIAMOND_BLOCK);
                         //output.accept(ModBlocks.BLOCK); this is how to add things
+                        output.accept(ModBlocks.BERYL_DEEPSLATE_ORE);
+                        output.accept(ModBlocks.BERYL_NETHER_ORE);
+                        output.accept(ModBlocks.BERYL_ORE);
+                        output.accept(ModBlocks.BERYL_END_ORE);
                     })
                     .build());
 

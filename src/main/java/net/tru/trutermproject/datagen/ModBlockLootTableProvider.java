@@ -15,6 +15,7 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.tru.trutermproject.block.ModBlocks;
+import net.tru.trutermproject.item.ModItems;
 
 import java.util.Set;
 
@@ -25,6 +26,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        add(ModBlocks.BERYL_ORE.get(), block ->
+                createMultipleOreDrops(ModBlocks.BERYL_ORE.get(), ModItems.BERYL.get(),
+                        1f, 1f));
+
+        add(ModBlocks.BERYL_DEEPSLATE_ORE.get(), block ->
+                createMultipleOreDrops(ModBlocks.BERYL_DEEPSLATE_ORE.get(), ModItems.BERYL.get(),
+                        1f, 1f));
+
+        add(ModBlocks.BERYL_NETHER_ORE.get(), block ->
+                createMultipleOreDrops(ModBlocks.BERYL_NETHER_ORE.get(), ModItems.BERYL.get(),
+                        1f, 1f));
+
+        add(ModBlocks.BERYL_END_ORE.get(), block ->
+                createMultipleOreDrops(ModBlocks.BERYL_END_ORE.get(), ModItems.BERYL.get(),
+                        1f, 1f));
 
     }
 

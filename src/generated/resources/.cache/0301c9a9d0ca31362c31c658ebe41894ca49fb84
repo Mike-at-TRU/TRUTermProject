@@ -1,1 +1,13 @@
-// 1.21	2024-11-01T15:01:26.8837644	Block States: trutermproject
+// 1.21	2024-11-07T12:29:28.2718948	Block States: trutermproject
+5760a7e5684e75d61af8f8c73e4525492e3dd2e0 assets/trutermproject/blockstates/beryl_deepslate_ore.json
+c44f2b040a8c5713b555d01a1f1e1793cfc1a1cd assets/trutermproject/blockstates/beryl_end_ore.json
+c57e33fbf1a614ce308781507300a28f078c2314 assets/trutermproject/blockstates/beryl_nether_ore.json
+03d5863277e3ef3929badbaf3e416b7f53036280 assets/trutermproject/blockstates/beryl_ore.json
+a356bf624e0617745e952a6e9149a97f40942f7d assets/trutermproject/models/block/beryl_deepslate_ore.json
+5f89f937c0c72725af329397fb5ff612e543ba60 assets/trutermproject/models/block/beryl_end_ore.json
+8fae1bf2f22890da87e2debab7c0b545f33abbab assets/trutermproject/models/block/beryl_nether_ore.json
+4b9c814c46ad14bb7cddf428b460174947c90709 assets/trutermproject/models/block/beryl_ore.json
+95c25d6791978c59dc1da0a351a932427fa34a56 assets/trutermproject/models/item/beryl_deepslate_ore.json
+c7a2c2cd7d9c27365152c39ca520783fb7b7b348 assets/trutermproject/models/item/beryl_end_ore.json
+7ddb6085aa12105b02bd6653a892f4dc4196a082 assets/trutermproject/models/item/beryl_nether_ore.json
+92551c63f704d95c119cca4d532a8dfac159de52 assets/trutermproject/models/item/beryl_ore.json

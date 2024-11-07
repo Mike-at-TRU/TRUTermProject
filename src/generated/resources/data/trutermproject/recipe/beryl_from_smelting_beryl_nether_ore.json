@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.5,
+  "group": "bertl",
+  "ingredient": {
+    "item": "trutermproject:beryl_nether_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "trutermproject:beryl"
+  }
+}
