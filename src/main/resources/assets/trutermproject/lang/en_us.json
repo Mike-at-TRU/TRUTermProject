@@ -1,9 +1,10 @@
 {
-  "block.trutermproject.beryl_end_ore": "Term Project Items",
-  "block.trutermproject.beryl_nether_ore": "Term Project Items",
-  "block.trutermproject.beryl_deepslate_ore": "Term Project Items",
-  "block.trutermproject.beryl_ore": "Term Project Items",
-  "item.trutermproject.beryl": "Term Project Items",
+  "block.trutermproject.beryl_end_ore": "Endstone Beryl Ore",
+  "block.trutermproject.beryl_nether_ore": "Nether Beryl Ore",
+  "block.trutermproject.beryl_deepslate_ore": "Deepslate Beryl Ore",
+  "block.trutermproject.beryl_ore": "Beryl Ore",
+  "item.trutermproject.beryl": "Beryl",
+  "item.trutermproject.raw_beryl": "Raw Beryl",
   "creativetab.trutermproject.term_project_tab": "Term Project Items",
   "creativetab.trutermproject.term_project_blocks": "Second Tab For Example"
 }

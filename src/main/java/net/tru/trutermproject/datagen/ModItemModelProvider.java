@@ -43,6 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         //basicItem()
         basicItem(ModItems.BERYL.get());
+        basicItem(ModItems.RAW_BERYL.get());
     }
 
 

@@ -25,6 +25,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept((Items.DIAMOND));
                         //output.accept(ModItems.ITEM); this is how to add things
+                        output.accept((ModItems.RAW_BERYL));
+                        output.accept((ModItems.BERYL));
                     })
                     .build());
 
