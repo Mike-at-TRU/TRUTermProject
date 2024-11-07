@@ -16,7 +16,7 @@ import java.util.concurrent.CompletableFuture;
 
 
 public class ModRecipeProvider extends RecipeProvider {
-    List<ItemLike> BERYL_SMELTABLES = List.of(ModItems.BERYL,
+    List<ItemLike> BERYL_SMELTABLES = List.of(ModItems.RAW_BERYL,
             ModBlocks.BERYL_ORE, ModBlocks.BERYL_DEEPSLATE_ORE, ModBlocks.BERYL_END_ORE, ModBlocks.BERYL_NETHER_ORE);
 
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
