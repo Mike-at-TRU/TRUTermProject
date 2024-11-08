@@ -2,8 +2,10 @@ package net.tru.trutermproject.datagen.WorldGen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.effect.MobEffect;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.tru.trutermproject.TRUTermProject;
@@ -20,5 +22,7 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
                         .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
                         .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap),
                 Set.of(TRUTermProject.MOD_ID));
+        
+
     }
 }

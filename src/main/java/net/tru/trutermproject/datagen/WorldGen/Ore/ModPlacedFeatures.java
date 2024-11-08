@@ -27,7 +27,7 @@ public class ModPlacedFeatures {
         Holder<ConfiguredFeature<?, ?>> holder =
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_BERYL_ORE);
 
-        register(context, BERYL_ORE, holder, ModOrePlacement.commonOrePlacements(3,
+        register(context, BERYL_ORE, holder, ModOrePlacement.commonOrePlacements(5,
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(20))));
     }
 

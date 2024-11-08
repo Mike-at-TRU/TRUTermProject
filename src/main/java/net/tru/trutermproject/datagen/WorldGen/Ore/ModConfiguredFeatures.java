@@ -11,6 +11,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.neoforged.neoforge.common.Tags;
 import net.tru.trutermproject.TRUTermProject;
 import net.tru.trutermproject.block.ModBlocks;
 import net.tru.trutermproject.util.ModTags;
@@ -25,11 +26,11 @@ public class ModConfiguredFeatures {
         RuleTest stoneReplacable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplacable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-        List<OreConfiguration.TargetBlockState> examplOre =
+        List<OreConfiguration.TargetBlockState> berylOre =
                 List.of(OreConfiguration.target(stoneReplacable, ModBlocks.BERYL_ORE.get().defaultBlockState()),
                         OreConfiguration.target(deepslateReplacable, ModBlocks.BERYL_DEEPSLATE_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_BERYL_ORE, Feature.ORE, new OreConfiguration(examplOre, 4));
+        register(context, OVERWORLD_BERYL_ORE, Feature.ORE, new OreConfiguration(berylOre, 7));
     }
 
     private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name) {

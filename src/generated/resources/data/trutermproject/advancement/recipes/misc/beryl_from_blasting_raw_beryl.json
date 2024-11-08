@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_beryl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "trutermproject:raw_beryl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "trutermproject:beryl_from_blasting_raw_beryl"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_beryl"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "trutermproject:beryl_from_blasting_raw_beryl"
+    ]
+  }
+}
