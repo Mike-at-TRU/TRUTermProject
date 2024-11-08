@@ -66,5 +66,3 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     }
 }
-
-

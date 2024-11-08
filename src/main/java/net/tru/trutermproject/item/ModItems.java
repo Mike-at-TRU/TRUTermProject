@@ -16,7 +16,6 @@ public class ModItems {
             you can add it to a creative mode tab to make testing easier and you need json files to give it a texture
 
    */
-
     public static final DeferredItem<Item> BERYL = ITEMS.register("beryl",
             () -> new Item(new Item.Properties()));
 
