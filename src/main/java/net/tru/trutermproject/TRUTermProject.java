@@ -3,6 +3,7 @@ package net.tru.trutermproject;
 import net.tru.trutermproject.block.ModBlocks;
 import net.tru.trutermproject.item.ModCreativeModeTabs;
 import net.tru.trutermproject.item.ModItems;
+import net.tru.trutermproject.effects.ModEffects;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -62,6 +63,7 @@ public class TRUTermProject {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
