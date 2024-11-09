@@ -66,7 +66,8 @@ public class ModItems {
     public static final DeferredItem<HoeItem> BERYL_HOE = ITEMS.register(
             "beryl_hoe", () -> new HoeItem(ModToolTiers.BERYL,
                     new Item.Properties().attributes(
-                            HoeItem.createAttributes(ModToolTiers.BERYL, -2.5f,
+                            HoeItem.createAttributes(ModToolTiers.BERYL,
+                                    -ModToolTiers.BERYL.getAttackDamageBonus(),
                                     -2))));
 
     public static void register(IEventBus eventBus) {
