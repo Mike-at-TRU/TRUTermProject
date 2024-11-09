@@ -26,36 +26,50 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        add(ModBlocks.BERYL_ORE.get(), block ->
-                createMultipleOreDrops(ModBlocks.BERYL_ORE.get(), ModItems.RAW_BERYL.get(),
-                        1f, 1f));
+        add(ModBlocks.BERYL_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.BERYL_ORE.get(),
+                        ModItems.RAW_BERYL.get(), 1f, 1f));
 
-        add(ModBlocks.BERYL_DEEPSLATE_ORE.get(), block ->
-                createMultipleOreDrops(ModBlocks.BERYL_DEEPSLATE_ORE.get(), ModItems.RAW_BERYL.get(),
-                        1f, 1f));
+        add(ModBlocks.BERYL_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(
+                        ModBlocks.BERYL_DEEPSLATE_ORE.get(),
+                        ModItems.RAW_BERYL.get(), 1f, 1f));
 
-        add(ModBlocks.BERYL_NETHER_ORE.get(), block ->
-                createMultipleOreDrops(ModBlocks.BERYL_NETHER_ORE.get(), ModItems.RAW_BERYL.get(),
-                        1f, 1f));
+        add(ModBlocks.BERYL_NETHER_ORE.get(), block -> createMultipleOreDrops(
+                ModBlocks.BERYL_NETHER_ORE.get(), ModItems.RAW_BERYL.get(), 1f,
+                1f));
 
-        add(ModBlocks.BERYL_END_ORE.get(), block ->
-                createMultipleOreDrops(ModBlocks.BERYL_END_ORE.get(), ModItems.RAW_BERYL.get(),
-                        1f, 1f));
+        add(ModBlocks.BERYL_END_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.BERYL_END_ORE.get(),
+                        ModItems.RAW_BERYL.get(), 1f, 1f));
+
 
     }
 
     @Override
     //because this is all the blocks all will need a loot table
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+        return ModBlocks.BLOCKS.getEntries().stream()
+                .map(Holder::value)::iterator;
     }
 
 
-    protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item itemToBeDroppedWithoutSilkTouch, float minimumNumberOfItemsToBeDropped, float maximumNumberOfItemsToBeDropped) {
-        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+    protected LootTable.Builder createMultipleOreDrops(Block pBlock,
+            Item itemToBeDroppedWithoutSilkTouch,
+            float minimumNumberOfItemsToBeDropped,
+            float maximumNumberOfItemsToBeDropped) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(
+                Registries.ENCHANTMENT);
+
         return this.createSilkTouchDispatchTable(pBlock,
-                this.applyExplosionDecay(pBlock, LootItem.lootTableItem(itemToBeDroppedWithoutSilkTouch)
-                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(minimumNumberOfItemsToBeDropped, maximumNumberOfItemsToBeDropped)))
-                        .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))));
+                this.applyExplosionDecay(pBlock,
+                        LootItem.lootTableItem(itemToBeDroppedWithoutSilkTouch)
+                                .apply(SetItemCountFunction.setCount(
+                                        UniformGenerator.between(
+                                                minimumNumberOfItemsToBeDropped,
+                                                maximumNumberOfItemsToBeDropped)))
+                                .apply(ApplyBonusCount.addOreBonusCount(
+                                        registrylookup.getOrThrow(
+                                                Enchantments.FORTUNE)))));
     }
 }

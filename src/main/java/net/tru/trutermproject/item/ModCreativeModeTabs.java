@@ -16,25 +16,30 @@ import net.tru.trutermproject.block.ModBlocks;
 import java.util.function.Supplier;
 
 public class ModCreativeModeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TRUTermProject.MOD_ID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(
+            Registries.CREATIVE_MODE_TAB, TRUTermProject.MOD_ID);
 
-    public static Supplier<CreativeModeTab> ALL_MOD_ITEMS = CREATIVE_MODE_TAB.register("term_project_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.DIAMOND))
-                    .title(Component.translatable("creativetab.trutermproject.term_project_tab"))
+    public static Supplier<CreativeModeTab> ALL_MOD_ITEMS = CREATIVE_MODE_TAB.register(
+            "term_project_tab", () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(Items.DIAMOND))
+                    .title(Component.translatable(
+                            "creativetab.trutermproject.term_project_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept((Items.DIAMOND));
                         //output.accept(ModItems.ITEM); this is how to add things
                         output.accept((ModItems.RAW_BERYL));
                         output.accept((ModItems.BERYL));
-                    })
-                    .build());
+                        output.accept(ModItems.IRON_HAMMER);
+                    }).build());
 
-    public static Supplier<CreativeModeTab> ALL_MOD_BLOCKS = CREATIVE_MODE_TAB.register("term_project_blocks",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.DIAMOND_BLOCK))
+    public static Supplier<CreativeModeTab> ALL_MOD_BLOCKS = CREATIVE_MODE_TAB.register(
+            "term_project_blocks", () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(Items.DIAMOND_BLOCK))
                     //inorder to define order
-                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TRUTermProject.MOD_ID, "term_project_tab"))
-                    .title(Component.translatable("creativetab.trutermproject.term_project_blocks"))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(
+                            TRUTermProject.MOD_ID, "term_project_tab"))
+                    .title(Component.translatable(
+                            "creativetab.trutermproject.term_project_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(Blocks.DIAMOND_BLOCK);
                         //output.accept(ModBlocks.BLOCK); this is how to add things
@@ -42,8 +47,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BERYL_NETHER_ORE);
                         output.accept(ModBlocks.BERYL_ORE);
                         output.accept(ModBlocks.BERYL_END_ORE);
-                    })
-                    .build());
+                    }).build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
