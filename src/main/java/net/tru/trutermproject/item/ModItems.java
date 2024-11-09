@@ -12,6 +12,8 @@ import net.tru.trutermproject.TRUTermProject;
 import net.tru.trutermproject.item.custom.HammerItem;
 
 public class ModItems {
+
+    //TODO why hammer not break iron ore?
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(
             TRUTermProject.MOD_ID);
 
