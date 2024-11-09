@@ -1,10 +1,7 @@
 package net.tru.trutermproject.item;
 
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -12,7 +9,14 @@ import net.tru.trutermproject.TRUTermProject;
 import net.tru.trutermproject.item.custom.HammerItem;
 
 public class ModItems {
-
+    private static final float SWORD_ATTACK = 3f;
+    private static float SWORD_SPEED = -2.4f;
+    private static float PICKAXE_ATTACK = 1f;
+    private static final float PICKAXE_SPEED = -2.8f;
+    private static float SHOVEL_ATTACK = 1.5f;
+    private static float SHOVEL_SPEED = -3f;
+    //axe and hoe not consistent todo learn more about axe
+    //hoe seems to just be negate the attack in the tier don't know about speed
     //TODO why hammer not break iron ore?
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(
             TRUTermProject.MOD_ID);
@@ -30,11 +34,40 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_BERYL = ITEMS.register(
             "raw_beryl", () -> new Item(new Item.Properties()));
 
+    //HAMMER TIME
+
     public static final DeferredItem<HammerItem> IRON_HAMMER = ITEMS.register(
             "iron_hammer", () -> new HammerItem(Tiers.IRON,
                     new Item.Properties().attributes(
-                            PickaxeItem.createAttributes(Tiers.IRON, 7F,
-                                    -3.5f)), 1));
+                            HammerItem.createAttributes(Tiers.IRON, 7F, -3.5f)),
+                    1));
+
+    // The Rest Of BERYL TOOLS
+    public static final DeferredItem<SwordItem> BERYL_SWORD = ITEMS.register(
+            "beryl_sword", () -> new SwordItem(ModToolTiers.BERYL,
+                    new Item.Properties().attributes(
+                            SwordItem.createAttributes(ModToolTiers.BERYL,
+                                    SWORD_ATTACK, SWORD_SPEED))));
+    public static final DeferredItem<PickaxeItem> BERYL_PICKAXE = ITEMS.register(
+            "beryl_pickaxe", () -> new PickaxeItem(ModToolTiers.BERYL,
+                    new Item.Properties().attributes(
+                            PickaxeItem.createAttributes(ModToolTiers.BERYL,
+                                    PICKAXE_ATTACK, PICKAXE_SPEED))));
+    public static final DeferredItem<AxeItem> BERYL_AXE = ITEMS.register(
+            "beryl_axe", () -> new AxeItem(ModToolTiers.BERYL,
+                    new Item.Properties().attributes(
+                            AxeItem.createAttributes(ModToolTiers.BERYL, 6,
+                                    -3))));
+    public static final DeferredItem<ShovelItem> BERYL_SHOVEL = ITEMS.register(
+            "beryl_shovel", () -> new ShovelItem(ModToolTiers.BERYL,
+                    new Item.Properties().attributes(
+                            ShovelItem.createAttributes(ModToolTiers.BERYL,
+                                    SHOVEL_ATTACK, SHOVEL_SPEED))));
+    public static final DeferredItem<HoeItem> BERYL_HOE = ITEMS.register(
+            "beryl_hoe", () -> new HoeItem(ModToolTiers.BERYL,
+                    new Item.Properties().attributes(
+                            HoeItem.createAttributes(ModToolTiers.BERYL, -2.5f,
+                                    -2))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

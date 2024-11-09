@@ -7,6 +7,6 @@ import net.tru.trutermproject.util.ModTags;
 
 public class ModToolTiers {
     public static final Tier BERYL = new SimpleTier(
-            ModTags.Blocks.INCORRECT_FOR_BERYL_TOOL, 1400, 4f, 3f, 29,
+            ModTags.Blocks.INCORRECT_FOR_BERYL_TOOL, 800, 7, 2.5f, 14,
             () -> Ingredient.of(ModItems.BERYL));
 }
