@@ -1,8 +1,0 @@
-{
-  "remove": [
-    "#minecraft:needs_iron_tool"
-  ],
-  "values": [
-    "#minecraft:incorrect_for_gold_tool"
-  ]
-}

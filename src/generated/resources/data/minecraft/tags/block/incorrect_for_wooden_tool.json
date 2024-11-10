@@ -1,9 +1,0 @@
-{
-  "values": [
-    "#neoforge:needs_netherite_tool",
-    "#minecraft:needs_diamond_tool",
-    "#minecraft:needs_iron_tool",
-    "#neoforge:needs_gold_tool",
-    "#minecraft:needs_stone_tool"
-  ]
-}

@@ -1,6 +1,6 @@
 {
   "remove": [
-    "#minecraft:needs_diamond_tool"
+    "#trutermproject:needs_beryl_tool"
   ],
   "values": [
     "#minecraft:incorrect_for_iron_tool"

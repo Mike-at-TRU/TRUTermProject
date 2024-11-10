@@ -18,6 +18,8 @@ public class ModTags {
         public static final TagKey<Block> BERYL_ORE = createTag("beryl_ore");
         public static final TagKey<Block> INCORRECT_FOR_BERYL_TOOL = createTag(
                 "incorrect_for_beryl_tool");
+        public static final TagKey<Block> NEEDS_BERYL_TOOL = createTag(
+                "needs_beryl_tool");
 
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(
