@@ -28,6 +28,13 @@ public class ModCreativeModeTabs {
                         //output.accept(ModItems.ITEM); this is how to add things
                         output.accept((ModItems.RAW_BERYL));
                         output.accept((ModItems.BERYL));
+
+                        output.accept((ModItems.BERYL_SWORD));
+                        output.accept((ModItems.BERYL_AXE));
+                        output.accept((ModItems.BERYL_PICKAXE));
+                        output.accept((ModItems.BERYL_SHOVEL));
+                        output.accept((ModItems.BERYL_HOE));
+
                         output.accept(ModItems.WOODEN_HAMMER);
                         output.accept(ModItems.STONE_HAMMER);
                         output.accept(ModItems.IRON_HAMMER);
