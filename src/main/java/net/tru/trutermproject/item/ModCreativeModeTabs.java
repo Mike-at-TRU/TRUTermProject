@@ -6,7 +6,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -27,7 +26,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept((Items.DIAMOND));
                         //output.accept(ModItems.ITEM); this is how to add things
-                        output.accept((ModItems.RAW_BERYL));
+                        output.accept((ModItems.BERYL_GEODE));
                         output.accept((ModItems.BERYL));
                         output.accept(ModItems.IRON_HAMMER);
                     }).build());

@@ -1,7 +1,5 @@
 package net.tru.trutermproject.item;
 
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Tiers;
@@ -25,9 +23,10 @@ public class ModItems {
     public static final DeferredItem<Item> BERYL = ITEMS.register("beryl",
             () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> RAW_BERYL = ITEMS.register(
-            "raw_beryl", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> BERYL_GEODE = ITEMS.register(
+            "beryl_geode", () -> new Item(new Item.Properties()));
 
+    //todo figure out how to keep hammer and just damage it
     public static final DeferredItem<HammerItem> IRON_HAMMER = ITEMS.register(
             "iron_hammer", () -> new HammerItem(Tiers.IRON,
                     new Item.Properties().attributes(

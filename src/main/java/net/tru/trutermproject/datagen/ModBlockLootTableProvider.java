@@ -28,20 +28,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         add(ModBlocks.BERYL_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.BERYL_ORE.get(),
-                        ModItems.RAW_BERYL.get(), 1f, 1f));
+                        ModItems.BERYL_GEODE.get(), 1f, 1f));
 
         add(ModBlocks.BERYL_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(
                         ModBlocks.BERYL_DEEPSLATE_ORE.get(),
-                        ModItems.RAW_BERYL.get(), 1f, 1f));
+                        ModItems.BERYL_GEODE.get(), 1f, 1f));
 
         add(ModBlocks.BERYL_NETHER_ORE.get(), block -> createMultipleOreDrops(
-                ModBlocks.BERYL_NETHER_ORE.get(), ModItems.RAW_BERYL.get(), 1f,
-                1f));
+                ModBlocks.BERYL_NETHER_ORE.get(), ModItems.BERYL_GEODE.get(),
+                1f, 1f));
 
         add(ModBlocks.BERYL_END_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.BERYL_END_ORE.get(),
-                        ModItems.RAW_BERYL.get(), 1f, 1f));
+                        ModItems.BERYL_GEODE.get(), 1f, 1f));
 
 
     }
