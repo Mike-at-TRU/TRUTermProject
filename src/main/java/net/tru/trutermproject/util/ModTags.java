@@ -23,6 +23,12 @@ public class ModTags {
             return BlockTags.create(
                     ResourceLocation.fromNamespaceAndPath(TRUTermProject.MOD_ID,
                             name));
+
+        }
+
+        private static TagKey<Block> createUniversalTag(String name) {
+            return BlockTags.create(
+                    ResourceLocation.fromNamespaceAndPath("c", name));
         }
     }
 
@@ -30,10 +36,18 @@ public class ModTags {
         public static final TagKey<Item> TRU_TERM_PROJECT_ITEMS = createTag(
                 "tru_items");
 
+        public static final TagKey<Item> HAMMERS = createUniversalTag(
+                "hammers");
+
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(
                     ResourceLocation.fromNamespaceAndPath(TRUTermProject.MOD_ID,
                             name));
+        }
+
+        private static TagKey<Item> createUniversalTag(String name) {
+            return ItemTags.create(
+                    ResourceLocation.fromNamespaceAndPath("c", name));
         }
     }
 }

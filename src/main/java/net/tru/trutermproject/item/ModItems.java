@@ -15,6 +15,8 @@ public class ModItems {
     private static final float PICKAXE_SPEED = -2.8f;
     private static float SHOVEL_ATTACK = 1.5f;
     private static float SHOVEL_SPEED = -3f;
+    private static float HAMMER_ATTACK = 7;
+    private static float HAMMER_SPEED = -3.5f;
     //axe and hoe not consistent todo learn more about axe
     //hoe seems to just be negate the attack in the tier don't know about speed
     //TODO why hammer not break iron ore?
@@ -35,12 +37,42 @@ public class ModItems {
             "raw_beryl", () -> new Item(new Item.Properties()));
 
     //HAMMER TIME
+    public static final DeferredItem<HammerItem> WOODEN_HAMMER = ITEMS.register(
+            "wooden_hammer", () -> new HammerItem(Tiers.WOOD,
+                    new Item.Properties().attributes(
+                            HammerItem.createAttributes(Tiers.WOOD,
+                                    HAMMER_ATTACK, -1.5f)), 1));
+    public static final DeferredItem<HammerItem> STONE_HAMMER = ITEMS.register(
+            "stone_hammer", () -> new HammerItem(Tiers.STONE,
+                    new Item.Properties().attributes(
+                            HammerItem.createAttributes(Tiers.STONE,
+                                    HAMMER_ATTACK, HAMMER_SPEED)), 1));
 
     public static final DeferredItem<HammerItem> IRON_HAMMER = ITEMS.register(
             "iron_hammer", () -> new HammerItem(Tiers.IRON,
                     new Item.Properties().attributes(
-                            HammerItem.createAttributes(Tiers.IRON, 7F, -3.5f)),
-                    1));
+                            HammerItem.createAttributes(Tiers.IRON,
+                                    HAMMER_ATTACK, HAMMER_SPEED)), 1));
+    public static final DeferredItem<HammerItem> GOLD_HAMMER = ITEMS.register(
+            "gold_hammer", () -> new HammerItem(Tiers.GOLD,
+                    new Item.Properties().attributes(
+                            HammerItem.createAttributes(Tiers.GOLD,
+                                    HAMMER_ATTACK, HAMMER_SPEED)), 2));
+    public static final DeferredItem<HammerItem> BERYL_HAMMER = ITEMS.register(
+            "beryl_hammer", () -> new HammerItem(ModToolTiers.BERYL,
+                    new Item.Properties().attributes(
+                            HammerItem.createAttributes(ModToolTiers.BERYL,
+                                    HAMMER_ATTACK, HAMMER_SPEED)), 1));
+    public static final DeferredItem<HammerItem> DIAMOND_HAMMER = ITEMS.register(
+            "diamond_hammer", () -> new HammerItem(Tiers.DIAMOND,
+                    new Item.Properties().attributes(
+                            HammerItem.createAttributes(Tiers.DIAMOND,
+                                    HAMMER_ATTACK, HAMMER_SPEED)), 2));
+    public static final DeferredItem<HammerItem> NETHERITE_HAMMER = ITEMS.register(
+            "netherite_hammer", () -> new HammerItem(Tiers.NETHERITE,
+                    new Item.Properties().attributes(
+                            HammerItem.createAttributes(Tiers.IRON,
+                                    HAMMER_ATTACK, HAMMER_SPEED)), 2));
 
     // The Rest Of BERYL TOOLS
     public static final DeferredItem<SwordItem> BERYL_SWORD = ITEMS.register(

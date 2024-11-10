@@ -48,7 +48,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BERYL.get());
         basicItem(ModItems.RAW_BERYL.get());
         // HAMMER TIME!
+        handheldItem(ModItems.WOODEN_HAMMER);
+
+        handheldItem(ModItems.STONE_HAMMER);
+
         handheldItem(ModItems.IRON_HAMMER);
+        handheldItem(ModItems.BERYL_HAMMER);
+        handheldItem(ModItems.GOLD_HAMMER);
+        handheldItem(ModItems.DIAMOND_HAMMER);
+        handheldItem(ModItems.NETHERITE_HAMMER);
 
         //beryl tools
         handheldItem(ModItems.BERYL_SWORD);
@@ -102,14 +110,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
                 // Non-trimmed armorItem file (normal variant)
                 this.withExistingParent(itemDeferredItem.getId().getPath(),
-                            mcLoc("item/generated")).override()
-                    .model(new ModelFile.UncheckedModelFile(
-                            trimNameResLoc.getNamespace() + ":item/" + trimNameResLoc.getPath()))
-                    .predicate(mcLoc("trim_type"), trimValue).end()
-                    .texture("layer0",
-                            ResourceLocation.fromNamespaceAndPath(MOD_ID,
-                                    "item/" + itemDeferredItem.getId()
-                                                              .getPath()))
+                                mcLoc("item/generated")).override()
+                        .model(new ModelFile.UncheckedModelFile(
+                                trimNameResLoc.getNamespace() + ":item/" + trimNameResLoc.getPath()))
+                        .predicate(mcLoc("trim_type"), trimValue).end()
+                        .texture("layer0",
+                                ResourceLocation.fromNamespaceAndPath(MOD_ID,
+                                        "item/" + itemDeferredItem.getId()
+                                                .getPath()))
                 ;
             });
         }
