@@ -1,15 +1,14 @@
 package net.tru.trutermproject.item;
 
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tru.trutermproject.TRUTermProject;
+import net.tru.trutermproject.item.custom.BlockFinder;
 import net.tru.trutermproject.item.custom.HammerItem;
+import net.tru.trutermproject.util.ModTags;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(
@@ -33,6 +32,9 @@ public class ModItems {
                     new Item.Properties().attributes(
                             PickaxeItem.createAttributes(Tiers.IRON, 7F,
                                     -3.5f)), 1));
+    public static final DeferredItem<BlockFinder> BERYL_ORE_FINDER = ITEMS.register(
+            "beryl_ore_finder", () -> new BlockFinder(new Item.Properties(),
+                    ModTags.Blocks.BERYL_ORE));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
