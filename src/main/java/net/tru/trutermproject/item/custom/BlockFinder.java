@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class BlockFinder extends Item {
-    TagKey<Block> blocksToFind;
+    private TagKey<Block> blocksToFind;
 
     public BlockFinder(Properties properties, TagKey<Block> blocksToFind) {
         super(properties);
