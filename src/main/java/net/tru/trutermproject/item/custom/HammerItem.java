@@ -24,6 +24,7 @@ public class HammerItem extends DiggerItem {
         this.range = range;
     }
 
+
     public List<BlockPos> getBlocksToBeDestroyed(BlockPos initalBlockPos,
             ServerPlayer player) {
         List<BlockPos> positions = new ArrayList<>();

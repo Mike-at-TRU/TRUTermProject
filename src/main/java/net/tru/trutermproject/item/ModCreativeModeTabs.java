@@ -6,7 +6,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -21,27 +20,38 @@ public class ModCreativeModeTabs {
 
     public static Supplier<CreativeModeTab> ALL_MOD_ITEMS = CREATIVE_MODE_TAB.register(
             "term_project_tab", () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(Items.DIAMOND))
+                    .icon(() -> new ItemStack(ModItems.BERYL_HAMMER.get()))
                     .title(Component.translatable(
                             "creativetab.trutermproject.term_project_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept((Items.DIAMOND));
                         //output.accept(ModItems.ITEM); this is how to add things
-                        output.accept((ModItems.RAW_BERYL));
+                        output.accept((ModItems.BERYL_GEODE));
                         output.accept((ModItems.BERYL));
+
+                        output.accept((ModItems.BERYL_SWORD));
+                        output.accept((ModItems.BERYL_AXE));
+                        output.accept((ModItems.BERYL_PICKAXE));
+                        output.accept((ModItems.BERYL_SHOVEL));
+                        output.accept((ModItems.BERYL_HOE));
+
+                        output.accept(ModItems.WOODEN_HAMMER);
+                        output.accept(ModItems.STONE_HAMMER);
                         output.accept(ModItems.IRON_HAMMER);
+                        output.accept(ModItems.BERYL_HAMMER);
+                        output.accept(ModItems.GOLD_HAMMER);
+                        output.accept(ModItems.DIAMOND_HAMMER);
+                        output.accept(ModItems.NETHERITE_HAMMER);
                     }).build());
 
     public static Supplier<CreativeModeTab> ALL_MOD_BLOCKS = CREATIVE_MODE_TAB.register(
             "term_project_blocks", () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(Items.DIAMOND_BLOCK))
+                    .icon(() -> new ItemStack(ModBlocks.BERYL_ORE))
                     //inorder to define order
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(
                             TRUTermProject.MOD_ID, "term_project_tab"))
                     .title(Component.translatable(
                             "creativetab.trutermproject.term_project_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(Blocks.DIAMOND_BLOCK);
                         //output.accept(ModBlocks.BLOCK); this is how to add things
                         output.accept(ModBlocks.BERYL_DEEPSLATE_ORE);
                         output.accept(ModBlocks.BERYL_NETHER_ORE);
