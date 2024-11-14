@@ -47,8 +47,23 @@ public class ModItemModelProvider extends ItemModelProvider {
         //basicItem()
         basicItem(ModItems.BERYL.get());
         basicItem(ModItems.RAW_BERYL.get());
+        // HAMMER TIME!
+        handheldItem(ModItems.WOODEN_HAMMER);
+
+        handheldItem(ModItems.STONE_HAMMER);
 
         handheldItem(ModItems.IRON_HAMMER);
+        handheldItem(ModItems.BERYL_HAMMER);
+        handheldItem(ModItems.GOLD_HAMMER);
+        handheldItem(ModItems.DIAMOND_HAMMER);
+        handheldItem(ModItems.NETHERITE_HAMMER);
+
+        //beryl tools
+        handheldItem(ModItems.BERYL_SWORD);
+        handheldItem(ModItems.BERYL_PICKAXE);
+        handheldItem(ModItems.BERYL_AXE);
+        handheldItem(ModItems.BERYL_SHOVEL);
+        handheldItem(ModItems.BERYL_HOE);
     }
 
 
@@ -69,10 +84,10 @@ public class ModItemModelProvider extends ItemModelProvider {
                 };
 
                 String armorItemPath = armorItem.toString();
-                String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location()
-                        .getPath();
-                String currentTrimName = armorItemPath + "_" + trimMaterial.location()
-                        .getPath() + "_trim";
+                String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial
+                        .location().getPath();
+                String currentTrimName = armorItemPath + "_" + trimMaterial
+                        .location().getPath() + "_trim";
                 ResourceLocation armorItemResLoc = ResourceLocation.parse(
                         armorItemPath);
                 ResourceLocation trimResLoc = ResourceLocation.parse(
@@ -86,11 +101,12 @@ public class ModItemModelProvider extends ItemModelProvider {
                         PackType.CLIENT_RESOURCES, ".png", "textures");
 
                 // Trimmed armorItem files
-                getBuilder(currentTrimName).parent(
-                                new ModelFile.UncheckedModelFile("item/generated"))
-                        .texture("layer0",
+                getBuilder(currentTrimName)
+                        .parent(new ModelFile.UncheckedModelFile(
+                                "item/generated")).texture("layer0",
                                 armorItemResLoc.getNamespace() + ":item/" + armorItemResLoc.getPath())
-                        .texture("layer1", trimResLoc);
+                        .texture("layer1", trimResLoc)
+                ;
 
                 // Non-trimmed armorItem file (normal variant)
                 this.withExistingParent(itemDeferredItem.getId().getPath(),
@@ -101,7 +117,8 @@ public class ModItemModelProvider extends ItemModelProvider {
                         .texture("layer0",
                                 ResourceLocation.fromNamespaceAndPath(MOD_ID,
                                         "item/" + itemDeferredItem.getId()
-                                                .getPath()));
+                                                .getPath()))
+                ;
             });
         }
     }
