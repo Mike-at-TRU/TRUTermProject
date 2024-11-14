@@ -44,6 +44,8 @@ public class ModItems {
 
     //todo figure out how to keep hammer and just damage it
 
+    //test
+
     public static final DeferredItem<BlockFinder> BERYL_ORE_FINDER = ITEMS.register(
             "beryl_ore_finder", () -> new BlockFinder(new Item.Properties(),
                     ModTags.Blocks.BERYL_ORE));
