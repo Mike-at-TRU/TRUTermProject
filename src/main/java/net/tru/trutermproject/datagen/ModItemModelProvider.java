@@ -46,8 +46,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         //basicItem()
         basicItem(ModItems.BERYL.get());
         basicItem(ModItems.BERYL_GEODE.get());
+        basicItem(ModItems.RAW_BERYL.get());
+        // HAMMER TIME!
+        handheldItem(ModItems.WOODEN_HAMMER);
+
+        handheldItem(ModItems.STONE_HAMMER);
 
         handheldItem(ModItems.IRON_HAMMER);
+        handheldItem(ModItems.BERYL_HAMMER);
+        handheldItem(ModItems.GOLD_HAMMER);
+        handheldItem(ModItems.DIAMOND_HAMMER);
+        handheldItem(ModItems.NETHERITE_HAMMER);
+
+        //beryl tools
+        handheldItem(ModItems.BERYL_SWORD);
+        handheldItem(ModItems.BERYL_PICKAXE);
+        handheldItem(ModItems.BERYL_AXE);
+        handheldItem(ModItems.BERYL_SHOVEL);
+        handheldItem(ModItems.BERYL_HOE);
     }
 
 
