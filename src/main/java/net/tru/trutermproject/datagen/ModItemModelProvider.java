@@ -8,7 +8,6 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -46,6 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         //basicItem()
         basicItem(ModItems.BERYL.get());
+        basicItem(ModItems.BERYL_GEODE.get());
         basicItem(ModItems.RAW_BERYL.get());
         // HAMMER TIME!
         handheldItem(ModItems.WOODEN_HAMMER);
