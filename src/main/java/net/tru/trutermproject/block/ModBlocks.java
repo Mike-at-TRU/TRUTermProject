@@ -2,17 +2,23 @@ package net.tru.trutermproject.block;
 
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.core.Holder;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tru.trutermproject.TRUTermProject;
+import net.tru.trutermproject.effects.ModEffects;
 import net.tru.trutermproject.item.ModItems;
 
 import java.util.function.Supplier;
@@ -47,6 +53,8 @@ how to create a block
                     BlockBehaviour.Properties.of().strength(3f)
                             .requiresCorrectToolForDrops()));
 
+    public static final DeferredBlock<Block> JAX_FLOWER = registerBlock(
+                "jax_flower", () -> new FlowerBlock(ModEffects.PRETTY_EFFECT, 10, BlockBehaviour.Properties.of().instabreak().noCollission()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name,
             Supplier<T> block) {
