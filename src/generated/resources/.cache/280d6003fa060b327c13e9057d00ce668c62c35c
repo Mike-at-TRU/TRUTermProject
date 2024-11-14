@@ -1,1 +1,7 @@
-// 1.21	2024-11-01T15:01:26.8827645	Tags for minecraft:item mod id trutermproject
+// 1.21	2024-11-14T12:04:50.614849	Tags for minecraft:item mod id trutermproject
+57383bf17f403e080f6c87638e06cb7a5f39d2f4 data/c/tags/item/hammers.json
+543a9ed406b294377c1933224f45a691e1465d62 data/minecraft/tags/item/axes.json
+282febca61e1b8733677cea5cc1b2e922dedbfdd data/minecraft/tags/item/hoes.json
+0ab78bad22c29c2540312f46a31c9a7ca83f35b9 data/minecraft/tags/item/pickaxes.json
+c623827dccef523497104dae5b3b92dc858caaf8 data/minecraft/tags/item/shovels.json
+d10c1705e509ddfb84cda8d5c36e6f5453a09aaa data/minecraft/tags/item/swords.json

@@ -1,4 +1,15 @@
-// 1.21	2024-11-08T16:22:53.7159199	Item Models: trutermproject
+// 1.21	2024-11-14T12:04:50.614849	Item Models: trutermproject
 1dd7afe9f13ed969054ca50baba823942bff5297 assets/trutermproject/models/item/beryl.json
+e168fdc6f9de83da1c799b8931c8d75e8e067d0a assets/trutermproject/models/item/beryl_axe.json
+43c26fe330b0e081f80fc7c2a9e98a131c1c0942 assets/trutermproject/models/item/beryl_geode.json
+517ecd7850fa2a5ca2f7e5cac439db0366bdd6c4 assets/trutermproject/models/item/beryl_hammer.json
+538e2ba5bb6a3251aa39c59efb537d0bfbaab4e0 assets/trutermproject/models/item/beryl_hoe.json
+ba9693b1c93629d2db10b9620e5ac64e820ea3d2 assets/trutermproject/models/item/beryl_pickaxe.json
+4a7e5b684b54ad7bbd0467af49b916117df11115 assets/trutermproject/models/item/beryl_shovel.json
+f585b1d0ba21ebf51d1a7d23bd9cdab9f7708355 assets/trutermproject/models/item/beryl_sword.json
+3b829ea23818746bd63746f19c31dc4b22f4eb34 assets/trutermproject/models/item/diamond_hammer.json
+04593198650e58d288c2286dfd13737336b21b15 assets/trutermproject/models/item/gold_hammer.json
 1723d298973173592942ca9061c3712f7ab52aed assets/trutermproject/models/item/iron_hammer.json
-29bd9e8b153313bdf181168232e6f5a271031001 assets/trutermproject/models/item/raw_beryl.json
+3b68e32207701c53bef75f4cb0f169603c95646e assets/trutermproject/models/item/netherite_hammer.json
+1df0d3b980183107081d6713fe4b333cf54a4da2 assets/trutermproject/models/item/stone_hammer.json
+d3f3db25dd06984266de1db0798b0cbb6813123b assets/trutermproject/models/item/wooden_hammer.json

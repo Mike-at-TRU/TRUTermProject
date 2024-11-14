@@ -5,7 +5,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.*;
 
 
-
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -44,7 +43,7 @@ public class ModItems {
 
 
     //todo figure out how to keep hammer and just damage it
-  
+
     public static final DeferredItem<BlockFinder> BERYL_ORE_FINDER = ITEMS.register(
             "beryl_ore_finder", () -> new BlockFinder(new Item.Properties(),
                     ModTags.Blocks.BERYL_ORE));
@@ -63,15 +62,12 @@ public class ModItems {
 
 
     public static final DeferredItem<HammerItem> IRON_HAMMER = ITEMS.register(
-            "iron_hammer", () -> new HammerItem(Tiers.IRON,
-                    new Item.Properties().attributes(
+            "iron_hammer",
+            () -> new HammerItem(Tiers.IRON, new Item.Properties().attributes(
 
-                            PickaxeItem.createAttributes(Tiers.IRON, 7F,
-                                    -3.5f)), 1));
-  
+                    PickaxeItem.createAttributes(Tiers.IRON, 7F, -3.5f)), 1));
 
-                            HammerItem.createAttributes(Tiers.IRON,
-                                    HAMMER_ATTACK, HAMMER_SPEED)), 1));
+
     public static final DeferredItem<HammerItem> GOLD_HAMMER = ITEMS.register(
             "gold_hammer", () -> new HammerItem(Tiers.GOLD,
                     new Item.Properties().attributes(

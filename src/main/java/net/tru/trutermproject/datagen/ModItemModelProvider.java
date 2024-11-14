@@ -46,7 +46,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         //basicItem()
         basicItem(ModItems.BERYL.get());
         basicItem(ModItems.BERYL_GEODE.get());
-        basicItem(ModItems.RAW_BERYL.get());
         // HAMMER TIME!
         handheldItem(ModItems.WOODEN_HAMMER);
 

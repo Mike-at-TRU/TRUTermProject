@@ -1,5 +1,5 @@
-// 1.21	2024-11-07T14:00:43.9060303	Loot Tables
-f980a92b324bdd8b5d92a8091747edac80b7f887 data/trutermproject/loot_table/blocks/beryl_deepslate_ore.json
-2fcb880cf23eb714b49c372e6f006f368f7a632e data/trutermproject/loot_table/blocks/beryl_end_ore.json
-ebeee3dde8b41e72d5a70343b184ed1023171e72 data/trutermproject/loot_table/blocks/beryl_nether_ore.json
-8c967609684dca65117b2d084129f1820dbb8ff8 data/trutermproject/loot_table/blocks/beryl_ore.json
+// 1.21	2024-11-14T12:04:50.6138524	Loot Tables
+122de380bcef912cd59b98587deff5aad245e7a3 data/trutermproject/loot_table/blocks/beryl_deepslate_ore.json
+244258260fd10de401538bc03e02807096f9535d data/trutermproject/loot_table/blocks/beryl_end_ore.json
+23e65e170046ca129f8a25f95f6791111e817474 data/trutermproject/loot_table/blocks/beryl_nether_ore.json
+0d12f9dad9058cd73a61d5d5a7b0f6f5166a7271 data/trutermproject/loot_table/blocks/beryl_ore.json
