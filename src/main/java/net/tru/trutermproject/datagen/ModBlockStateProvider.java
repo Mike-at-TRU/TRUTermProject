@@ -21,6 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BERYL_NETHER_ORE);
         blockWithItem(ModBlocks.BERYL_ORE);
         blockWithItem(ModBlocks.BERYL_END_ORE);
+        simpleBlock(ModBlocks.JAX_FLOWER.get(), models().cross("jax_flower", blockTexture(ModBlocks.JAX_FLOWER.get())).renderType("minecraft:cutout"));
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
