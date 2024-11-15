@@ -1,6 +1,6 @@
 package net.tru.trutermproject.effects;
 
-import java.util.function.Supplier;
+import net.minecraft.core.Holder;
 import net.tru.trutermproject.TRUTermProject;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
@@ -14,7 +14,7 @@ public class ModEffects {
             DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, TRUTermProject.MOD_ID);
 
 
-        public static final Supplier<MobEffect> PRETTY_EFFECT = MOB_EFFECTS.register("pretty",
+        public static final Holder<MobEffect> PRETTY_EFFECT = MOB_EFFECTS.register("pretty",
             () -> new PrettyEffect(MobEffectCategory.NEUTRAL, 0x36ebab));
 
 
