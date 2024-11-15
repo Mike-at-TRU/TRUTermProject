@@ -57,6 +57,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BERYL_NETHER_ORE);
                         output.accept(ModBlocks.BERYL_ORE);
                         output.accept(ModBlocks.BERYL_END_ORE);
+
+                        output.accept(ModBlocks.JAX_FLOWER);
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -42,6 +42,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.BERYL_END_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.BERYL_END_ORE.get(),
                         ModItems.BERYL_GEODE.get(), 1f, 1f));
+        dropSelf(ModBlocks.JAX_FLOWER.get());
 
 
     }

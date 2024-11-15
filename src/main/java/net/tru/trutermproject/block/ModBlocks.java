@@ -54,7 +54,7 @@ how to create a block
                             .requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> JAX_FLOWER = registerBlock(
-                "jax_flower", () -> new FlowerBlock(ModEffects.PRETTY_EFFECT, 10, BlockBehaviour.Properties.of().instabreak().noCollission()));
+                "jax_flower", () -> new FlowerBlock(ModEffects.PRETTY_EFFECT, 10, BlockBehaviour.Properties.of().instabreak().noOcclusion()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name,
             Supplier<T> block) {
