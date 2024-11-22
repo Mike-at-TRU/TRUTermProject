@@ -45,13 +45,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_gold_block", has(Blocks.GOLD_BLOCK))
                 .save(recipeOutput)
         ;
-        ShapedRecipeBuilder
-                .shaped(RecipeCategory.MISC, ModItems.BERYL_HAMMER)
-                .pattern("BBB").pattern("BAB").pattern("BBB")
-                .define('B', ModItems.BERYL).define('A', Items.APPLE)
-                .unlockedBy("has_gold_block", has(Blocks.GOLD_BLOCK))
-                .save(recipeOutput)
-        ;
+
 
 
 
@@ -72,14 +66,14 @@ public class ModRecipeProvider extends RecipeProvider {
     }
     protected static <T extends ShapedRecipe> void hammerRecipe(RecipeOutput recipeOutput, DeferredItem<HammerItem> hammerToCraft, Item itemUsedForCrafting){
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, hammerToCraft)
-                .pattern("III").pattern("SIS").pattern(" S ")
+                .pattern("III").pattern("ISI").pattern(" S ")
                 .define('I' , itemUsedForCrafting).define('S', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_" + itemUsedForCrafting.asItem(),has(itemUsedForCrafting))
                 .save(recipeOutput);
     }
     protected static <T extends ShapedRecipe> void hammerRecipe(RecipeOutput recipeOutput, DeferredItem<HammerItem> hammerToCraft, TagKey<Item> itemUsedForCrafting){
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, hammerToCraft)
-                .pattern("III").pattern("SIS").pattern(" S ")
+                .pattern("III").pattern("ISI").pattern(" S ")
                 .define('I' , itemUsedForCrafting).define('S', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_" + itemUsedForCrafting,has(itemUsedForCrafting))
                 .save(recipeOutput);
