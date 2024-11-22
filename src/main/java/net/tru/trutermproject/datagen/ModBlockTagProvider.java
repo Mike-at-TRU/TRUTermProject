@@ -52,7 +52,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .remove(Tags.Blocks.NEEDS_NETHERITE_TOOL)
         ;
+        tag(BlockTags.FLOWERS).add(ModBlocks.JAX_FLOWER.get());
 
-
+        
     }
 }
