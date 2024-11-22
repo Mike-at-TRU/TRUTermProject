@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_beryl_geode": {
+    "has_minecraft:iron_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "trutermproject:beryl_geode"
+            "items": "minecraft:iron_ingot"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "trutermproject:beryl"
+        "recipe": "trutermproject:iron_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_beryl_geode"
+      "has_minecraft:iron_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "trutermproject:beryl"
+      "trutermproject:iron_hammer"
     ]
   }
 }

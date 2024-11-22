@@ -3,13 +3,20 @@ package net.tru.trutermproject.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.MaceItem;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.tru.trutermproject.TRUTermProject;
 import net.tru.trutermproject.block.ModBlocks;
 import net.tru.trutermproject.item.ModItems;
+import net.tru.trutermproject.item.custom.HammerItem;
 import net.tru.trutermproject.util.ModTags;
 
 import java.util.List;
@@ -39,15 +46,40 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(recipeOutput)
         ;
 
+
+
+
         //todo waiting on other hammer items change to tag
         //do i need a suffix on this if so how
-        ShapelessRecipeBuilder
-                .shapeless(RecipeCategory.MISC, ModItems.BERYL.get(), 1)
-                .requires(ModItems.BERYL_GEODE).requires(ModItems.IRON_HAMMER)
-                .unlockedBy("has_beryl_geode", has(ModItems.BERYL_GEODE))
-                .save(recipeOutput)
-        ;
+
+        hammerRecipe(recipeOutput, ModItems.WOODEN_HAMMER, ItemTags.PLANKS);
+        hammerRecipe(recipeOutput, ModItems.STONE_HAMMER, ItemTags.STONE_TOOL_MATERIALS);
+        hammerRecipe(recipeOutput,ModItems.IRON_HAMMER, Items.IRON_INGOT);
+        hammerRecipe(recipeOutput, ModItems.GOLD_HAMMER, Items.GOLD_INGOT);
+
+        hammerRecipe(recipeOutput, ModItems.BERYL_HAMMER, ModItems.BERYL.get());
+
+        hammerRecipe(recipeOutput, ModItems.DIAMOND_HAMMER, Items.DIAMOND);
+
+        hammerRecipe(recipeOutput, ModItems.NETHERITE_HAMMER, Items.NETHERITE_INGOT);
+
     }
+    protected static <T extends ShapedRecipe> void hammerRecipe(RecipeOutput recipeOutput, DeferredItem<HammerItem> hammerToCraft, Item itemUsedForCrafting){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, hammerToCraft)
+                .pattern("III").pattern("ISI").pattern(" S ")
+                .define('I' , itemUsedForCrafting).define('S', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_" + itemUsedForCrafting.asItem(),has(itemUsedForCrafting))
+                .save(recipeOutput);
+    }
+    protected static <T extends ShapedRecipe> void hammerRecipe(RecipeOutput recipeOutput, DeferredItem<HammerItem> hammerToCraft, TagKey<Item> itemUsedForCrafting){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, hammerToCraft)
+                .pattern("III").pattern("ISI").pattern(" S ")
+                .define('I' , itemUsedForCrafting).define('S', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_" + itemUsedForCrafting,has(itemUsedForCrafting))
+                .save(recipeOutput);
+    }
+
+    //private String getUnlockedByName(Item)
 
     protected static void oreSmelting(RecipeOutput recipeOutput,
             List<ItemLike> pIngredients, RecipeCategory pCategory,
@@ -66,6 +98,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 BlastingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTime, pGroup, "_from_blasting");
     }
+
+
 
     protected static <T extends AbstractCookingRecipe> void oreCooking(
             RecipeOutput recipeOutput, RecipeSerializer<T> pCookingSerializer,
