@@ -49,8 +49,11 @@ public class ModRecipeProvider extends RecipeProvider {
 
 
 
-        //todo waiting on other hammer items change to tag
+
         //do i need a suffix on this if so how
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BERYL)
+                            .requires(ModItems.BERYL_GEODE).requires(ModTags.Items.HAMMERS)
+                            .unlockedBy("has_beryl_geode", has(ModItems.BERYL_GEODE.get())).save(recipeOutput);
 
         hammerRecipe(recipeOutput, ModItems.WOODEN_HAMMER, ItemTags.PLANKS);
         hammerRecipe(recipeOutput, ModItems.STONE_HAMMER, ItemTags.STONE_TOOL_MATERIALS);
@@ -121,4 +124,3 @@ public class ModRecipeProvider extends RecipeProvider {
         }
     }
 }
-
