@@ -82,6 +82,8 @@ public class HammerItem extends DiggerItem  {
     public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
         ItemStack toReturn = itemStack.copy();
         toReturn.setDamageValue(itemStack.getDamageValue() +1);
-        return  toReturn;
+        if (itemStack.getDamageValue() != itemStack.getMaxDamage())
+            return  toReturn;
+        return ItemStack.EMPTY;
     }
 }
