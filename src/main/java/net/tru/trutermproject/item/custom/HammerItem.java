@@ -7,16 +7,19 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.neoforged.neoforge.common.extensions.IItemStackExtension;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HammerItem extends DiggerItem {
+public class HammerItem extends DiggerItem  {
     int range;
 
     public HammerItem(Tier pTier, Properties pProperties, int range) {
@@ -68,5 +71,19 @@ public class HammerItem extends DiggerItem {
         }
 
         return positions;
+    }
+
+    @Override
+    public boolean hasCraftingRemainingItem(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
+        ItemStack toReturn = itemStack.copy();
+        toReturn.setDamageValue(itemStack.getDamageValue() +1);
+        if (itemStack.getDamageValue() != itemStack.getMaxDamage())
+            return  toReturn;
+        return ItemStack.EMPTY;
     }
 }
