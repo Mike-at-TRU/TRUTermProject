@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "trutermproject:beryl_geode"
+    },
+    {
+      "tag": "c:hammers"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "trutermproject:beryl"
+  }
+}

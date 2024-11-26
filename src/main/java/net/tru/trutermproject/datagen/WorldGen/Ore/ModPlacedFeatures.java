@@ -19,15 +19,27 @@ import java.util.List;
 //stolen from https://www.youtube.com/watch?v=_7sc7INW0IY
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BERYL_ORE = createKey("beryl_ore");
+    public static final ResourceKey<PlacedFeature> NETHER_BERYL_ORE = createKey("nether_beryl_ore");
+    public static final ResourceKey<PlacedFeature> END_BERYL_ORE = createKey("end_beryl_ore");
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        Holder<ConfiguredFeature<?, ?>> holder =
+        Holder<ConfiguredFeature<?, ?>> overworldBerylOre =
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_BERYL_ORE);
+        Holder<ConfiguredFeature<?, ?>> netherBerylOre =
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_BERYL_ORE);
+        Holder<ConfiguredFeature<?, ?>> endBerylOre =
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.END_BERYL_ORE);
 
-        register(context, BERYL_ORE, holder, ModOrePlacement.commonOrePlacements(5,
+        register(context, BERYL_ORE, overworldBerylOre, ModOrePlacement.commonOrePlacements(5,
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(20))));
+
+        register(context, NETHER_BERYL_ORE, netherBerylOre, ModOrePlacement.commonOrePlacements(5,
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(20))));
+
+        register(context, END_BERYL_ORE, endBerylOre, ModOrePlacement.commonOrePlacements(5,
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(20))));
     }
 
