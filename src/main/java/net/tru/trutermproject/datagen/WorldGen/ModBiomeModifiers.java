@@ -18,6 +18,8 @@ import net.tru.trutermproject.datagen.WorldGen.Ore.ModPlacedFeatures;
 
 public class ModBiomeModifiers {
     protected static ResourceKey<BiomeModifier> ADD_BERYL_ORE = createKey("add_beryl_ore");
+    protected static ResourceKey<BiomeModifier> ADD_NETHER_BERYL_ORE = createKey("add_nether_beryl_ore");
+    protected static ResourceKey<BiomeModifier> ADD_END_BERYL_ORE = createKey("add_end_beryl_ore");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -28,6 +30,20 @@ public class ModBiomeModifiers {
                 new BiomeModifiers.AddFeaturesBiomeModifier(
                         biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                         HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BERYL_ORE)),
+                        GenerationStep.Decoration.UNDERGROUND_ORES)
+        );
+        context.register(
+                ADD_NETHER_BERYL_ORE,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(BiomeTags.IS_NETHER),
+                        HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_BERYL_ORE)),
+                        GenerationStep.Decoration.UNDERGROUND_ORES)
+        );
+        context.register(
+                ADD_END_BERYL_ORE,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(BiomeTags.IS_END),
+                        HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_BERYL_ORE)),
                         GenerationStep.Decoration.UNDERGROUND_ORES)
         );
 
